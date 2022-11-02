@@ -1,12 +1,23 @@
 Package: mixedLSR
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Title: Tools for Mixed, Low-Rank, and Sparse Multivariate Regression On High-Dimensional Data
+Version: 0.99.0
+Authors@R: c(
+    person(given = "Alexander", family = "White", role = c("aut", "cre"), email = "whitealj@iu.edu", comment = c(ORCID = "0000-0002-9117-1475")),
+    person(given = "Sha", family = "Cao", role = c("aut"), email = "shacao@iu.edu", comment = c(ORCID = "0000-0002-8645-848X")),
+    person(given = "Yi", family = "Zhao", role = c("aut"), email = "yz125@iu.edu", comment = c(ORCID = "0000-0003-4766-5934")),
+    person(given = "Chi", family = "Zhang", role = c("ctb"), email = "czhang87@iu.edu", comment = c(ORCID = "0000-0001-9553-0925")))
+Description: Mixed, low-rank, and sparse multivariate regression (mixedLSR) provides tools for performing mixture regression when 
+  the coefficient matrix is low-rank and sparse. mixedLSR allows subgroup identification by alternating optimization 
+  with simulated annealing to encourage global maximum convergence. This method is data-adaptive, automatically 
+  performing parameter selection to identify low-rank substructures in the coefficient matrix. 
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
+Depends:
+    R (>= 4.1.0)
+Imports:
+    grpreg,
+    purrr,
+    MASS,
+    stats
