@@ -80,17 +80,14 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">simulate</span> <span class="op">&lt;-</span> <span class="fu"><a href="simulate_lsr.html">simulate_lsr</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="mixed_lsr.html">mixed_lsr</a></span><span class="op">(</span><span class="va">simulate</span><span class="op">$</span><span class="va">x</span>, <span class="va">simulate</span><span class="op">$</span><span class="va">y</span>, k <span class="op">=</span> <span class="fl">2</span>, init_lambda <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>alt_iter <span class="op">=</span> <span class="fl">1</span>, anneal_iter <span class="op">=</span> <span class="fl">3</span>, em_iter <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">50</span></span></span>
+<span class="r-in"><span><span class="va">simulate</span> <span class="op">&lt;-</span> <span class="fu"><a href="simulate_lsr.html">simulate_lsr</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="mixed_lsr.html">mixed_lsr</a></span><span class="op">(</span><span class="va">simulate</span><span class="op">$</span><span class="va">x</span>, <span class="va">simulate</span><span class="op">$</span><span class="va">y</span>, k <span class="op">=</span> <span class="fl">2</span>, init_lambda <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span>, alt_iter <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mixedLSR Start: 1 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> EM Step...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Simulated Annealing Step</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Full Cycle 1 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Computing Final Model...</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Done! </span>
-<span class="r-in"><span><span class="fu">bic_lsr</span><span class="op">(</span><span class="va">model</span><span class="op">$</span><span class="va">A</span>, n <span class="op">=</span> <span class="fl">100</span>, <span class="va">model</span><span class="op">$</span><span class="va">llik</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] -205.7011</span>
+<span class="r-in"><span><span class="fu">bic_lsr</span><span class="op">(</span><span class="va">model</span><span class="op">$</span><span class="va">A</span>, n <span class="op">=</span> <span class="va">n</span>, <span class="va">model</span><span class="op">$</span><span class="va">llik</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5545.652</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
