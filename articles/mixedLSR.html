@@ -87,7 +87,13 @@
 <div class="section level2">
 <h2 id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a>
 </h2>
-<p>Mixed, low-rank, and sparse multivariate regression (mixedLSR) provides tools for performing mixture regression when the coefficient matrix is low-rank and sparse. mixedLSR allows subgroup identification by alternating optimization with simulated annealing to encourage global optimum convergence. This method is data-adaptive, automatically performing parameter selection to identify low-rank substructures in the coefficient matrix.</p>
+<p>Mixed, low-rank, and sparse multivariate regression (mixedLSR)
+provides tools for performing mixture regression when the coefficient
+matrix is low-rank and sparse. mixedLSR allows subgroup identification
+by alternating optimization with simulated annealing to encourage global
+optimum convergence. This method is data-adaptive, automatically
+performing parameter selection to identify low-rank substructures in the
+coefficient matrix.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://alexanderjwhite.github.io/mixedLSR/">mixedLSR</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span></code></pre></div>
@@ -95,14 +101,17 @@
 <div class="section level2">
 <h2 id="simulate-data">Simulate Data<a class="anchor" aria-label="anchor" href="#simulate-data"></a>
 </h2>
-<p>To demonstrate mixedLSR, we simulate a heterogeneous population where the coefficient matrix is low-rank and sparse and the number of coefficients to estimate is much larger than the sample size.</p>
+<p>To demonstrate mixedLSR, we simulate a heterogeneous population where
+the coefficient matrix is low-rank and sparse and the number of
+coefficients to estimate is much larger than the sample size.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">sim</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/simulate_lsr.html">simulate_lsr</a></span><span class="op">(</span>N <span class="op">=</span> <span class="fl">100</span>, k <span class="op">=</span> <span class="fl">2</span>, p <span class="op">=</span> <span class="fl">30</span>, m <span class="op">=</span> <span class="fl">35</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="compute-model">Compute Model<a class="anchor" aria-label="anchor" href="#compute-model"></a>
 </h2>
-<p>Then, we compute the model. We limit the number of iterations the model can run.</p>
+<p>Then, we compute the model. We limit the number of iterations the
+model can run.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mixed_lsr.html">mixed_lsr</a></span><span class="op">(</span><span class="va">sim</span><span class="op">$</span><span class="va">x</span>, <span class="va">sim</span><span class="op">$</span><span class="va">y</span>, k <span class="op">=</span> <span class="fl">2</span>, alt_iter <span class="op">=</span> <span class="fl">1</span>, anneal_iter <span class="op">=</span> <span class="fl">10</span>, em_iter <span class="op">=</span> <span class="fl">10</span>, verbose <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="co">#&gt; mixedLSR Start: 1 </span></span>
@@ -116,7 +125,10 @@
 <div class="section level2">
 <h2 id="clustering-performance">Clustering Performance<a class="anchor" aria-label="anchor" href="#clustering-performance"></a>
 </h2>
-<p>Next, we can evaluate the clustering performance of mixedLSR by viewing a cross-tabulation of the partition labels and by computing the adjusted Rand index (ARI). In this case, mixedLSR perfectly clustered the data.</p>
+<p>Next, we can evaluate the clustering performance of mixedLSR by
+viewing a cross-tabulation of the partition labels and by computing the
+adjusted Rand index (ARI). In this case, mixedLSR perfectly clustered
+the data.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="va">sim</span><span class="op">$</span><span class="va">true</span>, <span class="va">model</span><span class="op">$</span><span class="va">assign</span><span class="op">)</span></span>
 <span><span class="co">#&gt;    </span></span>
@@ -130,11 +142,10 @@
 <div class="section level2">
 <h2 id="coefficient-heatmaps">Coefficient Heatmaps<a class="anchor" aria-label="anchor" href="#coefficient-heatmaps"></a>
 </h2>
-<p>Lastly, we can view a heatmap of the coefficient matrices and compare them to the true simulated matrices.</p>
+<p>Lastly, we can view a heatmap of the coefficient matrices and compare
+them to the true simulated matrices.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_lsr.html">plot_lsr</a></span><span class="op">(</span><span class="va">model</span><span class="op">$</span><span class="va">a</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: The `x` argument of `as_tibble.matrix()` must have unique column names if `.name_repair` is omitted as of tibble 2.0.0.</span></span>
-<span><span class="co">#&gt; Using compatibility `.name_repair`.</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_lsr.html">plot_lsr</a></span><span class="op">(</span><span class="va">model</span><span class="op">$</span><span class="va">a</span><span class="op">)</span></span></code></pre></div>
 <p><img src="mixedLSR_files/figure-html/visualize-1.png" width="700"></p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/plot_lsr.html">plot_lsr</a></span><span class="op">(</span><span class="va">sim</span><span class="op">$</span><span class="va">a</span><span class="op">)</span></span></code></pre></div>
@@ -142,18 +153,19 @@
 <p>Reproducibility</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; R version 4.1.3 (2022-03-10)</span></span>
-<span><span class="co">#&gt; Platform: x86_64-w64-mingw32/x64 (64-bit)</span></span>
-<span><span class="co">#&gt; Running under: Windows 10 x64 (build 19044)</span></span>
+<span><span class="co">#&gt; R version 4.2.2 (2022-10-31)</span></span>
+<span><span class="co">#&gt; Platform: x86_64-pc-linux-gnu (64-bit)</span></span>
+<span><span class="co">#&gt; Running under: Ubuntu 20.04.5 LTS</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Matrix products: default</span></span>
+<span><span class="co">#&gt; BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0</span></span>
+<span><span class="co">#&gt; LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; locale:</span></span>
-<span><span class="co">#&gt; [1] LC_COLLATE=English_United States.1252 </span></span>
-<span><span class="co">#&gt; [2] LC_CTYPE=English_United States.1252   </span></span>
-<span><span class="co">#&gt; [3] LC_MONETARY=English_United States.1252</span></span>
-<span><span class="co">#&gt; [4] LC_NUMERIC=C                          </span></span>
-<span><span class="co">#&gt; [5] LC_TIME=English_United States.1252    </span></span>
+<span><span class="co">#&gt;  [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       </span></span>
+<span><span class="co">#&gt;  [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   </span></span>
+<span><span class="co">#&gt;  [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          </span></span>
+<span><span class="co">#&gt; [10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; attached base packages:</span></span>
 <span><span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
@@ -162,22 +174,20 @@
 <span><span class="co">#&gt; [1] mixedLSR_0.1.0</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
-<span><span class="co">#&gt;  [1] tidyselect_1.1.2  xfun_0.33         bslib_0.4.0       purrr_0.3.4      </span></span>
-<span><span class="co">#&gt;  [5] lattice_0.20-45   colorspace_2.0-3  vctrs_0.4.2       generics_0.1.3   </span></span>
-<span><span class="co">#&gt;  [9] htmltools_0.5.3   viridisLite_0.4.1 yaml_2.3.5        utf8_1.2.2       </span></span>
-<span><span class="co">#&gt; [13] rlang_1.0.6       pkgdown_2.0.6     jquerylib_0.1.4   pillar_1.8.1     </span></span>
-<span><span class="co">#&gt; [17] glue_1.6.2        DBI_1.1.3         lifecycle_1.0.2   stringr_1.4.1    </span></span>
-<span><span class="co">#&gt; [21] munsell_0.5.0     gtable_0.3.1      ragg_1.2.3        memoise_2.0.1    </span></span>
-<span><span class="co">#&gt; [25] evaluate_0.16     labeling_0.4.2    knitr_1.40        fastmap_1.1.0    </span></span>
-<span><span class="co">#&gt; [29] fansi_1.0.3       highr_0.9         scales_1.2.1      cachem_1.0.6     </span></span>
-<span><span class="co">#&gt; [33] desc_1.4.2        jsonlite_1.8.1    farver_2.1.1      systemfonts_1.0.4</span></span>
-<span><span class="co">#&gt; [37] fs_1.5.2          textshaping_0.3.6 grpreg_3.4.0      ggplot2_3.3.6    </span></span>
-<span><span class="co">#&gt; [41] digest_0.6.29     stringi_1.7.6     dplyr_1.0.10      rprojroot_2.0.3  </span></span>
-<span><span class="co">#&gt; [45] grid_4.1.3        cli_3.3.0         tools_4.1.3       magrittr_2.0.3   </span></span>
-<span><span class="co">#&gt; [49] sass_0.4.2        tibble_3.1.8      tidyr_1.2.1       pkgconfig_2.0.3  </span></span>
-<span><span class="co">#&gt; [53] MASS_7.3-58.1     ellipsis_0.3.2    Matrix_1.5-1      assertthat_0.2.1 </span></span>
-<span><span class="co">#&gt; [57] rmarkdown_2.16    rstudioapi_0.14   R6_2.5.1          mclust_5.4.10    </span></span>
-<span><span class="co">#&gt; [61] compiler_4.1.3</span></span></code></pre></div>
+<span><span class="co">#&gt;  [1] highr_0.9         bslib_0.4.1       compiler_4.2.2    pillar_1.8.1     </span></span>
+<span><span class="co">#&gt;  [5] jquerylib_0.1.4   tools_4.2.2       mclust_6.0.0      digest_0.6.30    </span></span>
+<span><span class="co">#&gt;  [9] viridisLite_0.4.1 lattice_0.20-45   jsonlite_1.8.3    evaluate_0.17    </span></span>
+<span><span class="co">#&gt; [13] memoise_2.0.1     lifecycle_1.0.3   tibble_3.1.8      gtable_0.3.1     </span></span>
+<span><span class="co">#&gt; [17] pkgconfig_2.0.3   rlang_1.0.6       Matrix_1.5-1      cli_3.4.1        </span></span>
+<span><span class="co">#&gt; [21] yaml_2.3.6        pkgdown_2.0.6     xfun_0.34         fastmap_1.1.0    </span></span>
+<span><span class="co">#&gt; [25] stringr_1.4.1     knitr_1.40        vctrs_0.5.0       desc_1.4.2       </span></span>
+<span><span class="co">#&gt; [29] fs_1.5.2          sass_0.4.2        systemfonts_1.0.4 rprojroot_2.0.3  </span></span>
+<span><span class="co">#&gt; [33] grid_4.2.2        glue_1.6.2        R6_2.5.1          grpreg_3.4.0     </span></span>
+<span><span class="co">#&gt; [37] textshaping_0.3.6 fansi_1.0.3       rmarkdown_2.17    farver_2.1.1     </span></span>
+<span><span class="co">#&gt; [41] purrr_0.3.5       ggplot2_3.3.6     magrittr_2.0.3    scales_1.2.1     </span></span>
+<span><span class="co">#&gt; [45] htmltools_0.5.3   MASS_7.3-58.1     colorspace_2.0-3  labeling_0.4.2   </span></span>
+<span><span class="co">#&gt; [49] ragg_1.2.4        utf8_1.2.2        stringi_1.7.8     munsell_0.5.0    </span></span>
+<span><span class="co">#&gt; [53] cachem_1.0.6</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
