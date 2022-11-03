@@ -22,7 +22,7 @@ plot_lsr <- function(a, abs = TRUE){
       a_plot <- rbind(a_plot,a_i_p)
     }
   }
-  ggplot2::ggplot(a_plot, ggplot2::aes(x = Var2, y = Var1, fill = Freq)) +
+  ggplot2::ggplot(a_plot, ggplot2::aes_string(x = "Var2", y = "Var1", fill = "Freq")) +
     ggplot2::geom_tile() +
     ggplot2::theme(axis.title.x = ggplot2::element_blank(),
           axis.title.y = ggplot2::element_blank(),
@@ -36,6 +36,6 @@ plot_lsr <- function(a, abs = TRUE){
           legend.position = "top") +
     ggplot2::scale_y_discrete(limits = rev) +
     ggplot2::scale_fill_viridis_c(name="Coefficient") +
-    ggplot2::facet_grid(rows = ggplot2::vars(Subgroup), labeller = ggplot2::label_both)
+    ggplot2::facet_grid(rows = "Subgroup", labeller = ggplot2::label_both)
 }
 

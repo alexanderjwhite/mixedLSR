@@ -4,7 +4,7 @@ Version: 0.1.0
 Authors@R: c(
     person(given = "Alexander", family = "White", role = c("aut", "cre"), email = "whitealj@iu.edu", comment = c(ORCID = "0000-0002-9117-1475")),
     person(given = "Sha", family = "Cao", role = c("aut"), email = "shacao@iu.edu", comment = c(ORCID = "0000-0002-8645-848X")),
-    person(given = "Yi", family = "Zhao", role = c("aut"), email = "yz125@iu.edu", comment = c(ORCID = "0000-0003-4766-5934")),
+    person(given = "Yi", family = "Zhao", role = c("ctb"), email = "yz125@iu.edu", comment = c(ORCID = "0000-0003-4766-5934")),
     person(given = "Chi", family = "Zhang", role = c("ctb"), email = "czhang87@iu.edu", comment = c(ORCID = "0000-0001-9553-0925")))
 Description: Mixed, low-rank, and sparse multivariate regression (mixedLSR) provides tools for performing mixture regression when 
   the coefficient matrix is low-rank and sparse. mixedLSR allows subgroup identification by alternating optimization 
