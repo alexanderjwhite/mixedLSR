@@ -30,7 +30,13 @@
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
-      <ul class="navbar-nav"></ul></div>
+      <ul class="navbar-nav"><li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/alexanderjwhite/mixedLSR/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul></div>
 
     
   </div>
@@ -38,7 +44,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Compute Bayesian information criterion for a mixedLSR model</h1>
-      
+      <small class="dont-index">Source: <a href="https://github.com/alexanderjwhite/mixedLSR/blob/HEAD/R/bic_lsr.R" class="external-link"><code>R/bic_lsr.R</code></a></small>
       <div class="d-none name"><code>bic_lsr.Rd</code></div>
     </div>
 
@@ -79,12 +85,12 @@
 <span class="r-in"><span>alt_iter <span class="op">=</span> <span class="fl">1</span>, anneal_iter <span class="op">=</span> <span class="fl">3</span>, em_iter <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> mixedLSR Start: 1 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> EM Step...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Simulated Annealing Step.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Simulated Annealing Step</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Full Cycle 1 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Computing Final Model...</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Done! </span>
 <span class="r-in"><span><span class="fu">bic_lsr</span><span class="op">(</span><span class="va">model</span><span class="op">$</span><span class="va">A</span>, n <span class="op">=</span> <span class="fl">100</span>, <span class="va">model</span><span class="op">$</span><span class="va">llik</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 7355.155</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] -547.038</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
