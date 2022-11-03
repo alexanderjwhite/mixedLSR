@@ -1,4 +1,4 @@
-#' Internal Perturbation Function
+#' Internal Perturb Function
 #'
 #' @param assign The current clustering assignments.
 #' @param k The number of groups.
@@ -6,7 +6,7 @@
 #'
 #' @keywords internal
 #'
-#' @return A perturbated assignment.
+#' @return A perturbed assignment.
 #'
 fct_new_assign <- function(assign, k, p){
   n <- length(assign)

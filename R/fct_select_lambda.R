@@ -9,7 +9,7 @@
 #' @importFrom purrr safely
 #' @importFrom stats median
 #'
-#' @return A selected penalty paramter.
+#' @return A selected penalty parameter.
 #'
 fct_select_lambda <- function(x, y, k, clust_assign = NULL, initial = FALSE, type = "all", verbose){
   max_rank <- 3

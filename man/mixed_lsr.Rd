@@ -60,7 +60,6 @@ A list containing the likelihood, the partition, the coefficient matrices, and t
 Mixed Low-Rank and Sparse Multivariate Regression for High-Dimensional Data
 }
 \examples{
-simulate <- simulate_lsr()
-mixed_lsr(simulate$x, simulate$y, k = 2, init_lambda = c(1,1),
-alt_iter = 1, anneal_iter = 3, em_iter = 3)
+simulate <- simulate_lsr(50)
+mixed_lsr(simulate$x, simulate$y, k = 2, init_lambda = c(1,1), alt_iter = 0)
 }

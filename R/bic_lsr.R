@@ -9,10 +9,10 @@
 #' @export
 #'
 #' @examples
-#' simulate <- simulate_lsr()
-#' model <- mixed_lsr(simulate$x, simulate$y, k = 2, init_lambda = c(1,1),
-#' alt_iter = 1, anneal_iter = 3, em_iter = 3)
-#' bic_lsr(model$A, n = 100, model$llik)
+#' n <- 50
+#' simulate <- simulate_lsr(n)
+#' model <- mixed_lsr(simulate$x, simulate$y, k = 2, init_lambda = c(1,1), alt_iter = 0)
+#' bic_lsr(model$A, n = n, model$llik)
 bic_lsr <- function(a, n, llik){
   k <- length(a)
   nu <- 0

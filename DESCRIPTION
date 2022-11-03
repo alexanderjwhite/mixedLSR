@@ -1,5 +1,5 @@
 Package: mixedLSR
-Title: Tools for Mixed, Low-Rank, and Sparse Multivariate Regression On High-Dimensional Data
+Title: Tools for Mixed, Low-Rank, and Sparse Multivariate Regression on High-Dimensional Data
 Version: 0.1.0
 Authors@R: c(
     person(given = "Alexander", family = "White", role = c("aut", "cre"), email = "whitealj@iu.edu", comment = c(ORCID = "0000-0002-9117-1475")),

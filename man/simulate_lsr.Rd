@@ -33,7 +33,7 @@ simulate_lsr(
 \item{case}{The covariance case, "independent" or "dependent", default = "independent".}
 }
 \value{
-A list of simulation values, including x matrix, y matrix, coefficients and true clustring assignments.
+A list of simulation values, including x matrix, y matrix, coefficients and true clustering assignments.
 }
 \description{
 Simulate Heterogeneous, Low-Rank, and Sparse Data

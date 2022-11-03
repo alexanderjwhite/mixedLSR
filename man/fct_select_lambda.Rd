@@ -30,7 +30,7 @@ fct_select_lambda(
 \item{verbose}{A boolean indicating whether to print to screen.}
 }
 \value{
-A selected penalty paramter.
+A selected penalty parameter.
 }
 \description{
 Internal Penalty Parameter Selection Function.

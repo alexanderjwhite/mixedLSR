@@ -11,7 +11,7 @@
 #'
 #' @importFrom stats rnorm
 #'
-#' @return A list of simulation values, including x matrix, y matrix, coefficients and true clustring assignments.
+#' @return A list of simulation values, including x matrix, y matrix, coefficients and true clustering assignments.
 #' @export
 #'
 #' @examples

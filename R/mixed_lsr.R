@@ -20,9 +20,8 @@
 #' @export
 #'
 #' @examples
-#' simulate <- simulate_lsr()
-#' mixed_lsr(simulate$x, simulate$y, k = 2, init_lambda = c(1,1),
-#' alt_iter = 1, anneal_iter = 3, em_iter = 3)
+#' simulate <- simulate_lsr(50)
+#' mixed_lsr(simulate$x, simulate$y, k = 2, init_lambda = c(1,1), alt_iter = 0)
 mixed_lsr <- function(x, y, k, nstart = 1, init_assign = NULL, init_lambda = NULL, alt_iter = 5, anneal_iter = 1e3,
                    em_iter = 1e3, temp = 1e3, mu = 0.95, eps = 1e-6, accept_prob = 0.95, sim_N = 200, verbose = TRUE){
 

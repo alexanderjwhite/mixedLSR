@@ -2,7 +2,7 @@
 % Please edit documentation in R/fct_new_assign.R
 \name{fct_new_assign}
 \alias{fct_new_assign}
-\title{Internal Perturbation Function}
+\title{Internal Perturb Function}
 \usage{
 fct_new_assign(assign, k, p)
 }
@@ -14,9 +14,9 @@ fct_new_assign(assign, k, p)
 \item{p}{The acceptance probability.}
 }
 \value{
-A perturbated assignment.
+A perturbed assignment.
 }
 \description{
-Internal Perturbation Function
+Internal Perturb Function
 }
 \keyword{internal}
