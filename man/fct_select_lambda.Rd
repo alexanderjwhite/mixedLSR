@@ -4,7 +4,15 @@
 \alias{fct_select_lambda}
 \title{Internal Penalty Parameter Selection Function.}
 \usage{
-fct_select_lambda(x, y, k, clust_assign = NULL, initial = FALSE, type = "all")
+fct_select_lambda(
+  x,
+  y,
+  k,
+  clust_assign = NULL,
+  initial = FALSE,
+  type = "all",
+  verbose
+)
 }
 \arguments{
 \item{x}{A matrix of predictors.}
@@ -18,6 +26,8 @@ fct_select_lambda(x, y, k, clust_assign = NULL, initial = FALSE, type = "all")
 \item{initial}{An initial penalty parameter.}
 
 \item{type}{A type.}
+
+\item{verbose}{A boolean indicating whether to print to screen.}
 }
 \value{
 A selected penalty paramter.
@@ -25,3 +35,4 @@ A selected penalty paramter.
 \description{
 Internal Penalty Parameter Selection Function.
 }
+\keyword{internal}

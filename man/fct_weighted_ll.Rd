@@ -15,3 +15,4 @@ A weighted log likelihood vector
 \description{
 Internal Weighted Log Likelihood Function
 }
+\keyword{internal}

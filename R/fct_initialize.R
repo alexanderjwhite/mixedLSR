@@ -3,6 +3,8 @@
 #' @param k The number of groups.
 #' @param N The sample size.
 #'
+#' @keywords internal
+#'
 #' @importFrom stats runif
 #'
 #' @return A vector of assignments.

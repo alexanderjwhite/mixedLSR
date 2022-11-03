@@ -53,3 +53,4 @@ An updated clustering vector.
 \description{
 Internal Simulated Annealing Function
 }
+\keyword{internal}

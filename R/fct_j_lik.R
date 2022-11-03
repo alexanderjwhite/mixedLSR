@@ -4,6 +4,8 @@
 #' @inheritParams fct_gamma
 #' @param clust_assign A vector of cluster labels.
 #'
+#' @keywords internal
+#'
 #' @return The weighted log-likelihood
 #'
 fct_j_lik <- function(x, y, k, clust_assign, lambda, alpha = 2*sqrt(3), beta = 1, y_sparse = TRUE, max_rank = 3, rank = NULL){

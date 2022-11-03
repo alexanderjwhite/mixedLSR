@@ -9,6 +9,8 @@
 #' @param rank The rank, if known.
 #' @param max_rank The maximum allowed rank.
 #'
+#' @keywords internal
+#'
 #' @importFrom purrr safely
 #'
 #' @return A list with the posterior, coefficients, and estimated covariance.

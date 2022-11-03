@@ -44,3 +44,4 @@ The weighted log-likelihood
 \description{
 Internal Likelihood Function
 }
+\keyword{internal}

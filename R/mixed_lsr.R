@@ -44,7 +44,7 @@ mixed_lsr <- function(x, y, k, nstart = 1, init_assign = NULL, init_lambda = NUL
 
   best <- which.max(likelihood)
   best_bic <- bic_lsr(A[[best]], N, likelihood[best])
-  result <- list(llik = likelihood[best], assign = assignments[[best]], A = A[[best]], BIC = best_bic)
+  result <- list(llik = likelihood[best], assign = assignments[[best]], a = A[[best]], BIC = best_bic)
   if(verbose){cat("Done! \n")}
   return(result)
 }

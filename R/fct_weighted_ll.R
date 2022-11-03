@@ -2,6 +2,8 @@
 #'
 #' @param gamma A posterior matrix
 #'
+#' @keywords internal
+#'
 #' @return A weighted log likelihood vector
 #'
 fct_weighted_ll <- function(gamma){

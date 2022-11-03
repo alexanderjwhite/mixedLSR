@@ -4,6 +4,8 @@
 #' @param k The number of groups.
 #' @param p The acceptance probability.
 #'
+#' @keywords internal
+#'
 #' @return A perturbated assignment.
 #'
 fct_new_assign <- function(assign, k, p){

@@ -21,3 +21,4 @@ The estimated rank.
 \description{
 Internal Rank Estimation Function
 }
+\keyword{internal}

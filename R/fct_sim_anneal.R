@@ -4,6 +4,8 @@
 #' @param init_assign An initial clustering assignment.
 #' @param track A likelihood tracking vector.
 #'
+#' @keywords internal
+#'
 #' @return An updated clustering vector.
 #'
 fct_sim_anneal <- function(x, y, k, init_assign, lambda, temp, mu, eps, accept_prob, sim_N, track, anneal_iter = 1e3, verbose){
@@ -53,7 +55,7 @@ fct_sim_anneal <- function(x, y, k, init_assign, lambda, temp, mu, eps, accept_p
   if(sum(a_b != init_assign) > 0){
 
     lambda_old <- lambda
-    lambda <- fct_select_lambda(x, y, k, a_b, initial = FALSE)
+    lambda <- fct_select_lambda(x, y, k, a_b, initial = FALSE, verbose = verbose)
     empty_lam <- which(lambda==0)
     lambda[empty_lam] <- lambda_old[empty_lam]
   }

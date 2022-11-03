@@ -29,3 +29,4 @@ A mixedLSR model.
 \description{
 Internal EM Algorithm
 }
+\keyword{internal}

@@ -50,3 +50,4 @@ A list with the posterior, coefficients, and estimated covariance.
 \description{
 Internal Posterior Calculation
 }
+\keyword{internal}

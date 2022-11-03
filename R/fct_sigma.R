@@ -3,6 +3,8 @@
 #' @inheritParams fct_gamma
 #' @param m The number of outcome variables.
 #'
+#' @keywords internal
+#'
 #' @importFrom stats median
 #'
 #' @return The estimated sigma.

@@ -41,3 +41,4 @@ A list containing estimated coefficients, covariance, and penalty parameters.
 \description{
 Internal Double Penalized Projection Function
 }
+\keyword{internal}

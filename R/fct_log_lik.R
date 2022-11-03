@@ -6,6 +6,8 @@
 #' @param N The sample size.
 #' @param m The number of y features.
 #'
+#' @keywords internal
+#'
 #' @importFrom stats dnorm
 #'
 #' @return A posterior matrix.

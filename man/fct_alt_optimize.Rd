@@ -56,3 +56,4 @@ A final fit of mixedLSR
 \description{
 Internal Alternating Optimization Function
 }
+\keyword{internal}

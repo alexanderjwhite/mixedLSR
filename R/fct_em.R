@@ -3,6 +3,8 @@
 #' @inheritParams fct_alt_optimize
 #' @param lik_track A vector storing the log-likelihood by iteration.
 #'
+#' @keywords internal
+#'
 #' @return A mixedLSR model.
 #'
 fct_em <- function(x, y, k, lambda, clust_assign, lik_track, em_iter, verbose){
@@ -32,7 +34,7 @@ fct_em <- function(x, y, k, lambda, clust_assign, lik_track, em_iter, verbose){
     if(verbose){cat(".")}
     if(changed > 0){
       lambda_old <- lambda
-      lambda <- fct_select_lambda(x, y, k, clust_assign, initial = FALSE)
+      lambda <- fct_select_lambda(x, y, k, clust_assign, initial = FALSE, verbose = verbose)
       empty_lam <- which(lambda==0)
       lambda[empty_lam] <- lambda_old[empty_lam]
 

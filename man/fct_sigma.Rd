@@ -19,3 +19,4 @@ The estimated sigma.
 \description{
 Internal Sigma Estimation Function
 }
+\keyword{internal}

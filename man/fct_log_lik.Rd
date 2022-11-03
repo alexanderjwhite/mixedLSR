@@ -23,3 +23,4 @@ A posterior matrix.
 \description{
 Internal Log-Likelihood Function
 }
+\keyword{internal}

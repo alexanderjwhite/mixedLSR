@@ -4,6 +4,8 @@
 #' @param sigma An estimated standard deviation
 #' @param ptype A group penalized regression penalty type. See \link[grpreg]{grpreg}.
 #'
+#' @keywords internal
+#'
 #' @importFrom grpreg grpreg cv.grpreg
 #' @importFrom stats sd
 #'

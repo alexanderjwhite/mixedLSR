@@ -4,6 +4,8 @@
 #' @param sigma An estimated noise level.
 #' @param eta A rank selection parameter.
 #'
+#' @keywords internal
+#'
 #' @importFrom MASS ginv
 #'
 #' @return The estimated rank.
