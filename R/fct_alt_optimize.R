@@ -4,6 +4,8 @@
 #' @param clust_assign The current clustering assignment.
 #' @param lambda A vector of penalization parameters.
 #'
+#' @keywords internal
+#'
 #' @return A final fit of mixedLSR
 #'
 fct_alt_optimize <- function(x, y, k, clust_assign, lambda, alt_iter, anneal_iter, em_iter, temp, mu, eps, accept_prob, sim_N, verbose){
@@ -20,8 +22,7 @@ fct_alt_optimize <- function(x, y, k, clust_assign, lambda, alt_iter, anneal_ite
 
   # Select Initial Lambda
   if(is.null(lambda)){
-    if(verbose){cat("Selecting Initial Lambda \n")}
-    lambda <- fct_select_lambda(x, y, k, clust_assign = NULL, initial = TRUE)
+    lambda <- fct_select_lambda(x, y, k, clust_assign = NULL, initial = TRUE, verbose = verbose)
   }
 
   while(iter < alt_iter){

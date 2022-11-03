@@ -4,6 +4,7 @@
 #' @param n The sample size.
 #' @param llik The log-likelihood of the model.
 #'
+#'
 #' @return The BIC.
 #' @export
 #'
