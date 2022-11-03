@@ -1,0 +1,10 @@
+pandoc: 2.14.0.3
+pkgdown: 2.0.6
+pkgdown_sha: ~
+articles:
+  mixedLSR: mixedLSR.html
+last_built: 2022-11-03T15:18Z
+urls:
+  reference: https://alexanderjwhite.github.io/mixedLSR/reference
+  article: https://alexanderjwhite.github.io/mixedLSR/articles
+
