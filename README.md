@@ -12,7 +12,7 @@ Mixed, low-rank, and sparse multivariate regression (mixedLSR) provides
 tools for performing mixture regression when the coefficient matrix is
 low-rank and sparse. mixedLSR allows subgroup identification by
 alternating optimization with simulated annealing to encourage global
-maximum convergence. This method is data-adaptive, automatically
+optimum convergence. This method is data-adaptive, automatically
 performing parameter selection to identify low-rank substructures in the
 coefficient matrix.
 
