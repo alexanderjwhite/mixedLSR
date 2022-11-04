@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/alexanderjwhite/mixedLSR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/alexanderjwhite/mixedLSR/actions/workflows/R-CMD-check.yaml)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/mixedLSR)](https://CRAN.R-project.org/package=mixedLSR)
 <!-- badges: end -->
 
 Mixed, low-rank, and sparse multivariate regression (mixedLSR) provides
@@ -17,6 +19,13 @@ performing parameter selection to identify low-rank substructures in the
 coefficient matrix.
 
 ## Installation
+
+``` r
+# Install released version from CRAN
+install.packages("mixedLSR")
+```
+
+## Development version
 
 You can install the development version of mixedLSR from
 [GitHub](https://github.com/) with:
