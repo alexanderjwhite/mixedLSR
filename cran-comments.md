@@ -24,6 +24,14 @@ Found the following files/directories:
 
 * As noted in [R-hub issue #503](https://github.com/r-hub/rhub/issues/503), this could be due to a bug/crash in MiKTeX and can likely be ignored.
 
+## Resubmission
+
+This is a resubmission. In this version I have:
+
+* Edited redundancy in the package title.
+* Placed references to the package name in single quotes.
+
+
 
 
   
