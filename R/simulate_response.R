@@ -60,7 +60,7 @@ simulate_response <- function(N = 100, k = 2, p = 30, m = 35, b = 1, d = 20, h =
     C <- u%*%d%*%t(v)
 
     if(case=="independent"){rho = 0} else {rho = sample(seq(0.125,0.625,0.125),1)}
-    if(reponse=="independent"){rho_y = 0} else {rho_y = sample(seq(0.125,0.625,0.125),1)}
+    if(response=="independent"){rho_y = 0} else {rho_y = sample(seq(0.125,0.625,0.125),1)}
 
     Sigma <- matrix(1,p,p)
     for(j in 1:p) for (k in 1:p) Sigma[j,k] <- rho^abs(j-k)
